@@ -11,15 +11,14 @@
         padding: 0;
       }
       img {
-        height: 100%;
-        /* box-shadow: 1px 1px 10px #999; */
-        margin: 0px 12px;
-        cursor: pointer;
-        display: inline-block;
-        display: inline;
-        zoom: 1;
+        width: calc(100% - 40px);
+        margin: 12px;
+        /* cursor: pointer; */
+        /* display: inline-block; */
+        /* display: inline; */
+        /* zoom: 1; */
         vertical-align: top;
-        /* border-radius: 5%; */
+        border-radius: 50%;
       }
       html,
       body {
@@ -37,6 +36,7 @@
         background-color: rgb(0, 0, 0);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        color: white;
       }
       p {
         font-size: 8vmin;
@@ -45,86 +45,137 @@
       }
       a {
         text-decoration: none;
-        color: white;
-      }
-      a:hover {
-        color: orange;
-      }
-      .info {
         color: black;
-        padding: 20px 15px 10px 15px;
       }
-      .banner {
-        font-family: "Josefin Sans";
-        background-color: white;
-        /* border-bottom: 3px solid black; */
-        /* border-image: linear-gradient(
-          to bottom right,
-          #b827fc 50%,
-          #2c90fc 60%,
-          #b8fd33 70%,
-          #fec837 80%,
-          #fd1892 90%
-        );
-        border-image-slice: 1; */
+      /* a:hover {
+        color: rgb(47, 0, 255);
+      } */
+
+      .backdrop {
+        height: 100vh;
         width: 100vw;
-      }
-      #scrollcontainer {
-        font-size: 0;
-        position: relative;
-        white-space: nowrap;
-        width: 100vw;
-        height: 30vh;
-        border-bottom: 3px solid black;
-        background-image: linear-gradient(
-          to  right,
-          #b827fc 0%,
-          #2c90fc 25%,
-          #b8fd33 50%,
-          #fec837 75%,
-          #fd1892 100%
-        );
-        /* border-image-slice: 1; */
-      }
-      #scrollcontainer figure {
-        margin: 0;
         position: absolute;
-        top: 0;
+        background-color: white;
+        z-index: -1;
+      }
+      .blue {
+        left: 8%;
+        height: 80%;
+        width: 30%;
+        background-color: deepskyblue;
+        position: fixed;
+        top: 20%;
+      }
+      .red {
+        height: 40%;
+        width: 55%;
+        background-color: red;
+        position: fixed;
+        left: 55%;
+        top: 35%;
+      }
+      .yellow {
+        height: 50%;
+        width: 60%;
+        left: 32%;
+        position: fixed;
+        background-color: yellow;
+      }
+      .block {
+        opacity: 50%;
+        mix-blend-mode: multiply;
+      }
+      .content {
+        display: flex;
         width: 100%;
         height: 100%;
-        overflow-x: scroll;
+        z-index: 1;
+      }
+      .info {
+        flex: 1;
+        color: black;
+      }
+      .portfolio {
+        width: 20vw;
+        margin-right: 40px;
+        font-size: 0;
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
         overflow-y: hidden;
-        scroll-snap-type: mandatory;
+      }
+      .portfolio figure {
+        margin: 0;
+        top: 0;
+        width: 100%;
+      }
+
+      .primary {
+        animation: primary infinite 15s linear;
+      }
+      .secondary {
+        animation: secondary infinite 15s linear;
+      }
+      @keyframes primary {
+        from {
+          margin-top: 0px;
+        }
+        to {
+          margin-top: calc(-160vw + 100vh);
+        }
+      }
+
+      .title {
+        font-family: "Josefin Sans";
+        padding: 60px 40px;
+        border-bottom: black 2px solid;
+        width: 80%;
+      }
+      .contact ,.services{
+        padding: 20px 40px;
       }
     </style>
   </head>
   <body>
-    <div class="banner">
+    <div class="backdrop">
+      <div class="block blue"></div>
+      <div class="block red"></div>
+      <div class="block yellow"></div>
+    </div>
+    <div class="content">
       <div class="info">
-        <h1>America's Hair Studio</h1>
+        <div class="title"><h1>America's Hair Studio</h1></div>
+        <div class="contact">
+          <div>
+            <a href="https://www.instagram.com/americas_hair_studio/#"
+              >@americas_hair_studio</a
+            >
+          </div>
+          <div><a>+1 (669) 248-6003</a></div>
+        </div>
+        <div class="services">
+          <div><a>Haircut: $$$</a></div>
+          <div><a>Color: $$$</a></div>
+          <div><a>Service: $$$</a></div>
+          <div><a>Service: $$$</a></div>
+          <div><a>Service: $$$</a></div>
+          <div><a>Service: $$$</a></div>
+          <div><a>Service: $$$</a></div>
+        </div>
       </div>
-    </div>
-
-    <div id="scrollcontainer">
-      <figure>
-        <img src="p1.png" />
-        <img src="p2.png" />
-        <img src="p3.png" />
-        <img src="p4.png" />
-        <img src="p5.png" />
-        <img src="p6.png" />
-        <img src="p7.png" />
-        <img src="p8.png" />
-        <img src="p9.png" />
-      </figure>
-    </div>
-
-    <div class="contact">phone number</div>
-    <div class="services">
-      <ul>
-        <li>haircut</li>
-        <li>color</li>
-      </ul>
+      <div class="portfolio">
+        <figure class="primary">
+          <img src="p1.png" />
+          <img src="p2.png" />
+          <img src="p3.png" />
+          <img src="p4.png" />
+          <img src="p5.png" />
+          <img src="p6.png" />
+          <img src="p7.png" />
+          <img src="p8.png" />
+          <img src="p9.png" />
+        </figure>
+      </div>
     </div>
   </body>
 </html>
