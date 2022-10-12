@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        height: 100%;
+        /* box-shadow: 1px 1px 10px #999; */
+        margin: 0px 12px;
+        cursor: pointer;
+        display: inline-block;
+        display: inline;
+        zoom: 1;
+        vertical-align: top;
+        /* border-radius: 5%; */
+      }
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Raleway", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        font-size: x-large;
+        background-color: rgb(0, 0, 0);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      p {
+        font-size: 8vmin;
+        margin: 5rem 0;
+        padding: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        color: orange;
+      }
+      .info {
+        color: black;
+        padding: 20px 15px 10px 15px;
+      }
+      .banner {
+        font-family: "Josefin Sans";
+        background-color: white;
+        /* border-bottom: 3px solid black; */
+        /* border-image: linear-gradient(
+          to bottom right,
+          #b827fc 50%,
+          #2c90fc 60%,
+          #b8fd33 70%,
+          #fec837 80%,
+          #fd1892 90%
+        );
+        border-image-slice: 1; */
+        width: 100vw;
+      }
+      #scrollcontainer {
+        font-size: 0;
+        position: relative;
+        white-space: nowrap;
+        width: 100vw;
+        height: 30vh;
+        border-bottom: 3px solid black;
+        background-image: linear-gradient(
+          to  right,
+          #b827fc 0%,
+          #2c90fc 25%,
+          #b8fd33 50%,
+          #fec837 75%,
+          #fd1892 100%
+        );
+        /* border-image-slice: 1; */
+      }
+      #scrollcontainer figure {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: mandatory;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="info">
+        <h1>America's Hair Studio</h1>
+      </div>
+    </div>
+
+    <div id="scrollcontainer">
+      <figure>
+        <img src="p1.png" />
+        <img src="p2.png" />
+        <img src="p3.png" />
+        <img src="p4.png" />
+        <img src="p5.png" />
+        <img src="p6.png" />
+        <img src="p7.png" />
+        <img src="p8.png" />
+        <img src="p9.png" />
+      </figure>
+    </div>
+
+    <div class="contact">phone number</div>
+    <div class="services">
+      <ul>
+        <li>haircut</li>
+        <li>color</li>
+      </ul>
+    </div>
+  </body>
+</html>
